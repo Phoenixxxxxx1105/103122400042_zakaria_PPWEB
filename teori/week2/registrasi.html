@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran</title>
+</head>
+<body>
+    <!-- Menu Navigasi -->
+    <a href="index.html">Beranda</a> |
+    <a href="registrasi.html">Pendaftaran</a> |
+    <a href="galeri.html">Galeri</a> |
+    <a href="member.html">Member</a> |
+    <a href="kontak.html">Kontak Kami</a>
+    <hr>
+
+    <h1>Form Pendaftaran Anggota (Sesuai KTP)</h1>
+    
+    <form action="#" method="POST">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>NIK</td><td>:</td><td><input type="number" name="nik"></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir</td><td>:</td><td><input type="text" name="tempat_lahir"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td><td>:</td>
+                <td>
+                    <input type="radio" name="jk" value="Laki-laki">Laki-laki
+                    <input type="radio" name="jk" value="Perempuan">Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat Lengkap</td><td>:</td><td><textarea name="alamat" cols="25" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>Agama</td><td>:</td>
+                <td>
+                    <select name="agama">
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td><td>:</td><td><input type="text" name="pekerjaan"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    <button type="submit">Simpan</button>
+                    <button type="reset">Batal</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+    <p><i>Footer: Hak Cipta 2026 - Website Saya</i></p>
+</body>
+</html>

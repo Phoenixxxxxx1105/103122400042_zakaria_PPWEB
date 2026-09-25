@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa</title>
+</head>
+<body>
+
+    <h2>Form Pendaftaran Mahasiswa</h2>
+    
+    <form action="#" method="POST">
+        
+        <div>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Masukkan email aktif" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Buat password" required>
+        </div>
+        <br>
+
+        <div>
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+            <label for="pria">Pria</label>
+            
+            <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+            <label for="wanita">Wanita</label>
+        </div>
+        <br>
+
+        <div>
+            <label>Hobi (bisa pilih lebih dari satu):</label><br>
+            <input type="checkbox" id="hobi_membaca" name="hobi" value="Membaca">
+            <label for="hobi_membaca">Membaca</label><br>
+            
+            <input type="checkbox" id="hobi_olahraga" name="hobi" value="Olahraga">
+            <label for="hobi_olahraga">Olahraga</label><br>
+            
+            <input type="checkbox" id="hobi_musik" name="hobi" value="Musik">
+            <label for="hobi_musik">Mendengarkan Musik</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="pendidikan">Pendidikan Terakhir:</label><br>
+            <select id="pendidikan" name="pendidikan">
+                <option value="">-- Pilih Pendidikan --</option>
+                <option value="SMA">SMA / Sederajat</option>
+                <option value="D3">Diploma 3 (D3)</option>
+                <option value="S1">Sarjana 1 (S1)</option>
+                <option value="S2">Sarjana 2 (S2)</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="kritik_saran">Kritik dan Saran:</label><br>
+            <textarea id="kritik_saran" name="kritik_saran" rows="5" cols="40" placeholder="Tuliskan kritik dan saran Anda di sini..."></textarea>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit">Submit Pendaftaran</button>
+            <button type="reset">Reset Form</button> 
+        </div>
+
+    </form>
+
+</body>
+</html>
