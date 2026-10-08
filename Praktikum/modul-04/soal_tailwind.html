@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kampus - Katalog Produk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    
+    <header id="beranda" class="bg-white shadow-sm mb-8 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">Toko Kampus</h1>
+            <p class="text-gray-600 mb-6">Perlengkapan kuliah untuk kebutuhan sehari-hari</p>
+            <nav class="flex justify-center space-x-6">
+                <a href="#beranda" class="text-blue-600 hover:text-blue-800 font-semibold transition">Beranda</a>
+                <a href="#produk" class="text-blue-600 hover:text-blue-800 font-semibold transition">Produk</a>
+                <a href="#kontak" class="text-blue-600 hover:text-blue-800 font-semibold transition">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mb-10">
+        
+        <section id="produk" class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">Katalog Produk</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white p-4 rounded-lg shadow flex flex-col">
+                    <img src="assets/Buku.jpg" alt="Buku Catatan" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="font-bold text-lg">Buku Catatan</h3>
+                    <p class="text-xl font-semibold mb-2">Rp15.000</p>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Buku untuk mencatat materi kuliah.</p>
+                    <a href="#detail-buku" class="bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition block">Lihat Detail</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow flex flex-col">
+                    <img src="assets/Pulpen.jpg" alt="Pulpen" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="font-bold text-lg">Pulpen</h3>
+                    <p class="text-xl font-semibold mb-2">Rp5.000</p>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Pulpen untuk menulis tugas dan catatan.</p>
+                    <a href="#detail-pulpen" class="bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition block">Lihat Detail</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow flex flex-col">
+                    <img src="assets/Tumbler.jpg" alt="Tumbler" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="font-bold text-lg">Tumbler</h3>
+                    <p class="text-xl font-semibold mb-2">Rp35.000</p>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Botol minum untuk dibawa ke kampus.</p>
+                    <a href="#detail-tumbler" class="bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition block">Lihat Detail</a>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow flex flex-col">
+                    <img src="assets/Tas_Kuliah.jpg" alt="Tas Kuliah" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="font-bold text-lg">Tas Kuliah</h3>
+                    <p class="text-xl font-semibold mb-2">Rp120.000</p>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Tas untuk menyimpan buku dan alat tulis.</p>
+                    <a href="#detail-tas" class="bg-blue-500 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition block">Lihat Detail</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">Detail Produk</h2>
+            <div class="space-y-6">
+                <div id="detail-buku" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 border-b pb-2">Detail: Buku Catatan</h3>
+                    <p class="mt-2 text-gray-700"><strong>Bahan:</strong> Kertas HVS 70 gsm berkualitas tinggi, Cover Art Carton tebal.</p>
+                    <p class="text-gray-700"><strong>Ukuran:</strong> A5 (14.8 x 21 cm) - Berisi 100 halaman.</p>
+                </div>
+                
+                <div id="detail-pulpen" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 border-b pb-2">Detail: Pulpen</h3>
+                    <p class="mt-2 text-gray-700"><strong>Bahan:</strong> Plastik daur ulang ramah lingkungan, tinta gel hitam pekat.</p>
+                    <p class="text-gray-700"><strong>Ukuran:</strong> Ketebalan ujung pena 0.5 mm, nyaman digenggam.</p>
+                </div>
+
+                <div id="detail-tumbler" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 border-b pb-2">Detail: Tumbler</h3>
+                    <p class="mt-2 text-gray-700"><strong>Bahan:</strong> Stainless Steel 304, dilengkapi insulasi vakum ganda tahan panas dan dingin hingga 8 jam.</p>
+                    <p class="text-gray-700"><strong>Kapasitas:</strong> 500 ml.</p>
+                </div>
+
+                <div id="detail-tas" class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 border-b pb-2">Detail: Tas Kuliah</h3>
+                    <p class="mt-2 text-gray-700"><strong>Bahan:</strong> Kanvas tebal anti air (water-resistant).</p>
+                    <p class="text-gray-700"><strong>Fitur:</strong> Dilengkapi kompartemen khusus laptop ukuran 15 inci dan kantong jaring untuk botol minum di sisi samping.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="bg-gray-800 text-white p-8 rounded-lg shadow-md text-center max-w-3xl mx-auto mt-12">
+            <h2 class="text-2xl font-bold mb-4">Kontak Kami</h2>
+            <p class="text-lg font-semibold mb-2">Toko Kampus</p>
+            <p class="mb-4">Email: <a href="mailto:toko@example.com" class="text-blue-400 hover:underline">toko@example.com</a></p>
+            <p class="text-sm text-gray-400">Gedung Pusat Kegiatan Mahasiswa Lt. 1<br>Buka Senin - Jumat (08.00 - 16.00 WIB)</p>
+        </section>
+        
+    </main>
+
+</body>
+</html>
