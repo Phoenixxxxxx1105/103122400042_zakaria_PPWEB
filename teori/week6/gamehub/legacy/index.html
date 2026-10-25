@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GAMEHUB adalah katalog game PC modern. Telusuri game berdasarkan genre, bandingkan spesifikasi, cek ukuran file dan rating — semua tautan menuju toko resmi.">
+  <meta name="theme-color" content="#080b12">
+  <title>GAMEHUB | Katalog &amp; Informasi Game PC Terlengkap</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Buka atau tutup menu navigasi">
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <!--NAVBAR-->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="logo" href="#home" aria-label="GAMEHUB beranda">
+        <span class="logo-mark" aria-hidden="true">G</span>
+        <span class="logo-text">GAME<span>HUB</span></span>
+      </a>
+
+      <label class="hamburger" for="menu-toggle" aria-label="Buka atau tutup menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-panel">
+        <ul class="nav-links">
+          <li><a href="#home" aria-current="page">Beranda</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#categories">Kategori</a></li>
+          <li><a href="#new-releases">Rilis Baru</a></li>
+          <li><a href="#popular">Populer</a></li>
+          <li><a href="#about">Tentang</a></li>
+        </ul>
+
+        <form class="search" role="search" action="#games" title="Demo antarmuka — tanpa backend">
+          <label class="visually-hidden" for="search-input">Cari game</label>
+          <input id="search-input" type="search" name="q" placeholder="Cari game, genre…" autocomplete="off">
+          <button class="search-clear" type="reset" aria-label="Bersihkan pencarian">&#10005;</button>
+          <button class="search-submit" type="submit" aria-label="Cari" data-tooltip="Demo UI (tanpa backend)">&#8594;</button>
+        </form>
+
+        <label class="btn btn-login" for="login-toggle">MASUK</label>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!--HERO-->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="blob blob-purple" aria-hidden="true"></div>
+      <div class="blob blob-cyan" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="hero-badge"><span class="dot" aria-hidden="true"></span>PUSTAKA GAME PC ANDAL</span>
+          <h1 id="hero-title">TEMUKAN<br><span class="gradient-text">GAME FAVORITMU BERIKUTNYA</span></h1>
+          <p class="hero-text">
+            GAMEHUB adalah katalog game PC yang bersih dan terkurasi. Telusuri menurut genre,
+            bandingkan spesifikasi, cek ukuran file dan rating — lalu lanjutkan lewat toko resmi
+            dalam hitungan detik.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#games">JELAJAHI GAME</a>
+            <a class="btn btn-outline" href="#popular">GAME TERPOPULER</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>16</strong><span>Judul lengkap</span></li>
+            <li><strong>4.7&#9733;</strong><span>Rating editorial</span></li>
+            <li><strong>10</strong><span>Genre</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <span class="deco deco-1"></span>
+          <span class="deco deco-2"></span>
+          <span class="deco deco-3"></span>
+
+          <div class="hero-cover">
+            <img src="../public/images/games/elden-ring/cover.webp" alt="" width="600" height="900" loading="eager">
+            <span class="hero-cover-text">MAIN TANPA<br>BATAS</span>
+          </div>
+
+          <div class="float-card float-card-1">
+            <img src="../public/images/games/elden-ring/capsule.webp" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <strong>Elden Ring</strong>
+              <small>&#9733; 4.8 &middot; 60 GB</small>
+            </div>
+          </div>
+          <div class="float-card float-card-2">
+            <div>
+              <strong>Info Terverifikasi</strong>
+              <small>&#10003; dari halaman resmi Steam</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FEATURED GAME SLIDER-->
+    <section class="section" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Pilihan editor</p>
+            <h2 class="section-title" id="featured-title">GAME UNGGULAN</h2>
+          </div>
+          <span class="editorial-note">Rating &#9733; adalah nilai editorial GAMEHUB.</span>
+        </header>
+
+        <div class="slider">
+          <input type="radio" name="featured" id="s1" class="slide-radio" checked aria-label="Tampilkan slide 1">
+          <input type="radio" name="featured" id="s2" class="slide-radio" aria-label="Tampilkan slide 2">
+          <input type="radio" name="featured" id="s3" class="slide-radio" aria-label="Tampilkan slide 3">
+
+          <div class="slides">
+            <!-- Slide 1 -->
+            <article class="slide">
+              <div class="cover aspect-portrait slide-cover">
+                <img src="../public/images/games/cyberpunk-2077/header.webp" alt="Banner resmi Cyberpunk 2077 (sumber: Steam)" width="460" height="215" loading="lazy">
+                <span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span>
+              </div>
+              <div class="slide-info">
+                <p class="eyebrow">01 / 03 &middot; Sedang unggulan</p>
+                <h3 class="slide-title">Cyberpunk 2077</h3>
+                <div class="badge-row">
+                  <span class="badge badge-genre">Action RPG</span>
+                  <span class="badge badge-rating">&#9733; 4.6</span>
+                  <span class="badge badge-updated">TERBARU</span>
+                </div>
+                <p class="slide-desc">Jelajahi jalanan Night City yang menyala neon dalam action RPG dunia terbuka tentang kekuasaan, keglamoran, dan modifikasi tubuh. Bangun mercenary-mu sendiri dan tentukan akhir cerita.</p>
+                <dl class="fact-list">
+                  <div><dt>Rilis</dt><dd>9 Des 2020</dd></div>
+                  <div><dt>Developer</dt><dd>CD PROJEKT RED</dd></div>
+                  <div><dt>Ukuran</dt><dd>&plusmn; 70 GB (SSD)</dd></div>
+                  <div><dt>Platform</dt><dd>Windows PC</dd></div>
+                </dl>
+                <div class="slide-actions">
+                  <label class="btn" for="modal-1">LIHAT GAME</label>
+                  <a class="btn btn-outline" href="pages/games/cyberpunk-2077.html">HALAMAN LENGKAP &#8594;</a>
+                </div>
+              </div>
+              <div class="slide-nav">
+                <label for="s3" class="slide-arrow" aria-label="Slide sebelumnya" data-tooltip="Sebelumnya">&#8592;</label>
+                <label for="s2" class="slide-arrow" aria-label="Slide berikutnya" data-tooltip="Berikutnya">&#8594;</label>
+              </div>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="slide">
+              <div class="cover aspect-portrait slide-cover">
+                <img src="../public/images/games/elden-ring/header.webp" alt="Banner resmi Elden Ring (sumber: Steam)" width="460" height="215" loading="lazy">
+                <span class="badge badge-popular">&#128293; POPULER</span>
+              </div>
+              <div class="slide-info">
+                <p class="eyebrow">02 / 03 &middot; Sedang unggulan</p>
+                <h3 class="slide-title">Elden Ring</h3>
+                <div class="badge-row">
+                  <span class="badge badge-genre">Action RPG</span>
+                  <span class="badge badge-rating">&#9733; 4.8</span>
+                  <span class="badge badge-trending">TRENDING</span>
+                </div>
+                <p class="slide-desc">Bangkitlah, Tarnished, dan kembalilah ke Lands Between. Dunia fantasi besar karya FromSoftware penuh boss menantang, dungeon tersembunyi, dan kebebasan bermain sesukamu.</p>
+                <dl class="fact-list">
+                  <div><dt>Rilis</dt><dd>24 Feb 2022</dd></div>
+                  <div><dt>Developer</dt><dd>FromSoftware</dd></div>
+                  <div><dt>Ukuran</dt><dd>&plusmn; 60 GB</dd></div>
+                  <div><dt>Platform</dt><dd>Windows PC</dd></div>
+                </dl>
+                <div class="slide-actions">
+                  <label class="btn" for="modal-3">LIHAT GAME</label>
+                  <a class="btn btn-outline" href="pages/games/elden-ring.html">HALAMAN LENGKAP &#8594;</a>
+                </div>
+              </div>
+              <div class="slide-nav">
+                <label for="s1" class="slide-arrow" aria-label="Slide sebelumnya" data-tooltip="Sebelumnya">&#8592;</label>
+                <label for="s3" class="slide-arrow" aria-label="Slide berikutnya" data-tooltip="Berikutnya">&#8594;</label>
+              </div>
+            </article>
+
+            <!-- Slide 3 -->
+            <article class="slide">
+              <div class="cover aspect-portrait slide-cover">
+                <img src="../public/images/games/red-dead-redemption-2/header.webp" alt="Banner resmi Red Dead Redemption 2 (sumber: Steam)" width="460" height="215" loading="lazy">
+                <span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span>
+              </div>
+              <div class="slide-info">
+                <p class="eyebrow">03 / 03 &middot; Sedang unggulan</p>
+                <h3 class="slide-title">Red Dead Redemption 2</h3>
+                <div class="badge-row">
+                  <span class="badge badge-genre">Action Adventure</span>
+                  <span class="badge badge-rating">&#9733; 4.8</span>
+                  <span class="badge badge-popular">&#128293; POPULER</span>
+                </div>
+                <p class="slide-desc">Naiki prairie Amerika luas di tahun 1899 bersama geng Van der Linde. Western dunia-terbuka sinematik dengan dunia yang hidup dan cerita yang lama membekas.</p>
+                <dl class="fact-list">
+                  <div><dt>Rilis (PC)</dt><dd>5 Des 2019</dd></div>
+                  <div><dt>Developer</dt><dd>Rockstar Games</dd></div>
+                  <div><dt>Ukuran</dt><dd>&plusmn; 150 GB</dd></div>
+                  <div><dt>Platform</dt><dd>Windows PC</dd></div>
+                </dl>
+                <div class="slide-actions">
+                  <label class="btn" for="modal-2">LIHAT GAME</label>
+                  <a class="btn btn-outline" href="pages/games/red-dead-redemption-2.html">HALAMAN LENGKAP &#8594;</a>
+                </div>
+              </div>
+              <div class="slide-nav">
+                <label for="s2" class="slide-arrow" aria-label="Slide sebelumnya" data-tooltip="Sebelumnya">&#8592;</label>
+                <label for="s1" class="slide-arrow" aria-label="Slide berikutnya" data-tooltip="Berikutnya">&#8594;</label>
+              </div>
+            </article>
+          </div>
+
+          <div class="dots">
+            <label for="s1"><span class="visually-hidden">Slide 1: Cyberpunk 2077</span></label>
+            <label for="s2"><span class="visually-hidden">Slide 2: Elden Ring</span></label>
+            <label for="s3"><span class="visually-hidden">Slide 3: Red Dead Redemption 2</span></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--GAME POPULER + FILTER (CSS-only) -->
+    <section class="section section-alt" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Paling dicintai pemain</p>
+            <h2 class="section-title" id="popular-title">GAME POPULER</h2>
+          </div>
+          <span class="editorial-note">&#9733; rating &amp; ukuran file: editorial GAMEHUB &middot; data resmi Steam, Okt 2026.</span>
+        </header>
+
+        <input type="radio" name="genre" id="f-all" class="filter-radio" checked>
+        <input type="radio" name="genre" id="f-action" class="filter-radio">
+        <input type="radio" name="genre" id="f-rpg" class="filter-radio">
+        <input type="radio" name="genre" id="f-fps" class="filter-radio">
+        <input type="radio" name="genre" id="f-racing" class="filter-radio">
+        <input type="radio" name="genre" id="f-horror" class="filter-radio">
+        <input type="radio" name="genre" id="f-adventure" class="filter-radio">
+
+        <div class="catalog-toolbar" id="games">
+          <div class="filter-bar" role="group" aria-label="Saring game menurut genre">
+            <label class="chip" for="f-all">SEMUA</label>
+            <label class="chip" for="f-action">ACTION</label>
+            <label class="chip" for="f-rpg">RPG</label>
+            <label class="chip" for="f-fps">FPS</label>
+            <label class="chip" for="f-racing">RACING</label>
+            <label class="chip" for="f-horror">HORROR</label>
+            <label class="chip" for="f-adventure">ADVENTURE</label>
+          </div>
+          <div class="sort">
+            <label for="sort-select">Urutkan</label>
+            <select id="sort-select" name="sort" title="Demo UI — butuh JavaScript, belum aktif">
+              <option>Terpopuler</option>
+              <option>Rating tertinggi</option>
+              <option>Terbaru</option>
+              <option>Terlama</option>
+              <option>Ukuran terkecil</option>
+              <option>Ukuran terbesar</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="games-grid">
+
+          <!-- 1 -->
+          <article class="game-card" data-genre="action rpg fps">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/cyberpunk-2077/cover.webp" alt="Cover resmi Cyberpunk 2077 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-popular">&#128293; POPULER</span>
+              <span class="badge badge-rating">&#9733; 4.6</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/cyberpunk-2077/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <img src="../public/images/games/the-witcher-3/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">CD PROJEKT RED &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-1">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Cyberpunk 2077</h3>
+              <p><span class="badge badge-genre">Action RPG</span></p>
+              <ul class="card-meta"><li>&#128190; 70 GB</li><li>&#128197; 2020</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-1">DETAIL</label>
+                <input type="checkbox" id="fav-1" class="favorite-toggle">
+                <label class="favorite" for="fav-1" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Cyberpunk 2077 di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="game-card" data-genre="action adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/red-dead-redemption-2/cover.webp" alt="Cover resmi Red Dead Redemption 2 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-trending">TRENDING</span>
+              <span class="badge badge-rating">&#9733; 4.8</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/red-dead-redemption-2/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Rockstar Games &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-2">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Red Dead Redemption 2</h3>
+              <p><span class="badge badge-genre">Action Adventure</span></p>
+              <ul class="card-meta"><li>&#128190; 150 GB</li><li>&#128197; 2019</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-2">DETAIL</label>
+                <input type="checkbox" id="fav-2" class="favorite-toggle">
+                <label class="favorite" for="fav-2" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Red Dead Redemption 2 di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="game-card" data-genre="action rpg adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/elden-ring/cover.webp" alt="Cover resmi Elden Ring (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-popular">&#128293; POPULER</span>
+              <span class="badge badge-rating">&#9733; 4.8</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/elden-ring/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">FromSoftware &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-3">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Elden Ring</h3>
+              <p><span class="badge badge-genre">Action RPG</span></p>
+              <ul class="card-meta"><li>&#128190; 60 GB</li><li>&#128197; 2022</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-3">DETAIL</label>
+                <input type="checkbox" id="fav-3" class="favorite-toggle">
+                <label class="favorite" for="fav-3" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Elden Ring di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="game-card" data-genre="action adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/grand-theft-auto-v/cover.webp" alt="Cover resmi Grand Theft Auto V (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-updated">TERBARU</span>
+              <span class="badge badge-rating">&#9733; 4.7</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/grand-theft-auto-v/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Rockstar North &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-4">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Grand Theft Auto V</h3>
+              <p><span class="badge badge-genre">Action Adventure</span></p>
+              <ul class="card-meta"><li>&#128190; 125 GB</li><li>&#128197; 2015</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-4">DETAIL</label>
+                <input type="checkbox" id="fav-4" class="favorite-toggle">
+                <label class="favorite" for="fav-4" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Grand Theft Auto V di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="game-card" data-genre="rpg adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/hogwarts-legacy/cover.webp" alt="Cover resmi Hogwarts Legacy (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-verified">&#10003; TERVERIFIKASI</span>
+              <span class="badge badge-rating">&#9733; 4.5</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/hogwarts-legacy/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Avalanche Software &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-5">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hogwarts Legacy</h3>
+              <p><span class="badge badge-genre">RPG Adventure</span></p>
+              <ul class="card-meta"><li>&#128190; 85 GB</li><li>&#128197; 2023</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-5">DETAIL</label>
+                <input type="checkbox" id="fav-5" class="favorite-toggle">
+                <label class="favorite" for="fav-5" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Hogwarts Legacy di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="game-card" data-genre="racing">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/forza-horizon-5/cover.webp" alt="Cover resmi Forza Horizon 5 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-trending">TRENDING</span>
+              <span class="badge badge-rating">&#9733; 4.7</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/forza-horizon-5/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Playground Games &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-6">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Forza Horizon 5</h3>
+              <p><span class="badge badge-genre">Racing</span></p>
+              <ul class="card-meta"><li>&#128190; 110 GB</li><li>&#128197; 2021</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-6">DETAIL</label>
+                <input type="checkbox" id="fav-6" class="favorite-toggle">
+                <label class="favorite" for="fav-6" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Forza Horizon 5 di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="game-card" data-genre="rpg adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/the-witcher-3/cover.webp" alt="Cover resmi The Witcher 3: Wild Hunt (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-popular">&#128293; POPULER</span>
+              <span class="badge badge-rating">&#9733; 4.9</span>
+              <div class="cover-overlay">
+                <p class="overlay-info">CD PROJEKT RED &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-7">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Witcher 3: Wild Hunt</h3>
+              <p><span class="badge badge-genre">RPG Adventure</span></p>
+              <ul class="card-meta"><li>&#128190; 50 GB (SSD)</li><li>&#128197; 2015</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-7">DETAIL</label>
+                <input type="checkbox" id="fav-7" class="favorite-toggle">
+                <label class="favorite" for="fav-7" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi The Witcher 3 di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="game-card" data-genre="action adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/god-of-war/cover.webp" alt="Cover resmi God of War (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-verified">&#10003; TERVERIFIKASI</span>
+              <span class="badge badge-rating">&#9733; 4.8</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/god-of-war/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Santa Monica Studio &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-8">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">God of War</h3>
+              <p><span class="badge badge-genre">Action Adventure</span></p>
+              <ul class="card-meta"><li>&#128190; 70 GB</li><li>&#128197; 2022</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-8">DETAIL</label>
+                <input type="checkbox" id="fav-8" class="favorite-toggle">
+                <label class="favorite" for="fav-8" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi God of War di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="game-card" data-genre="horror action">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/resident-evil-4/cover.webp" alt="Cover resmi Resident Evil 4 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-popular">&#128293; POPULER</span>
+              <span class="badge badge-rating">&#9733; 4.7</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/resident-evil-4/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Capcom &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-9">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Resident Evil 4</h3>
+              <p><span class="badge badge-genre">Horror Action</span></p>
+              <ul class="card-meta"><li>&#128190; 60 GB</li><li>&#128197; 2023</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-9">DETAIL</label>
+                <input type="checkbox" id="fav-9" class="favorite-toggle">
+                <label class="favorite" for="fav-9" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Resident Evil 4 di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="game-card" data-genre="fps action">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/doom-eternal/cover.webp" alt="Cover resmi DOOM Eternal (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-trending">TRENDING</span>
+              <span class="badge badge-rating">&#9733; 4.6</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/doom-eternal/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">id Software &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-10">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">DOOM Eternal</h3>
+              <p><span class="badge badge-genre">FPS Action</span></p>
+              <ul class="card-meta"><li>&#128190; 80 GB</li><li>&#128197; 2020</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-10">DETAIL</label>
+                <input type="checkbox" id="fav-10" class="favorite-toggle">
+                <label class="favorite" for="fav-10" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi DOOM Eternal di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="game-card" data-genre="horror action">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/dead-space/cover.webp" alt="Cover resmi Dead Space 2023 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-updated">TERBARU</span>
+              <span class="badge badge-rating">&#9733; 4.5</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/dead-space/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">Motive Studio &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-11">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dead Space</h3>
+              <p><span class="badge badge-genre">Horror Action</span></p>
+              <ul class="card-meta"><li>&#128190; 50 GB</li><li>&#128197; 2023</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-11">DETAIL</label>
+                <input type="checkbox" id="fav-11" class="favorite-toggle">
+                <label class="favorite" for="fav-11" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Dead Space di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="game-card" data-genre="fps horror adventure">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/metro-exodus/cover.webp" alt="Cover resmi Metro Exodus (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-verified">&#10003; TERVERIFIKASI</span>
+              <span class="badge badge-rating">&#9733; 4.5</span>
+              <div class="cover-overlay">
+                <img src="../public/images/games/metro-exodus/capsule.webp" alt="" width="231" height="87" loading="lazy" style="border-radius:10px;max-width:180px;height:auto;">
+                <p class="overlay-info">4A Games &middot; Windows PC</p>
+                <label class="btn btn-sm" for="modal-12">LIHAT DETAIL</label>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Metro Exodus</h3>
+              <p><span class="badge badge-genre">FPS Horror</span></p>
+              <ul class="card-meta"><li>&#128190; 59 GB</li><li>&#128197; 2020</li></ul>
+              <div class="card-actions">
+                <label class="btn btn-outline btn-sm" for="modal-12">DETAIL</label>
+                <input type="checkbox" id="fav-12" class="favorite-toggle">
+                <label class="favorite" for="fav-12" data-tooltip="Tambah ke favorit">FAVORIT</label>
+                <a class="icon-btn" href="#" aria-label="Halaman resmi Metro Exodus di Steam (buka tab baru)" data-tooltip="Halaman resmi Steam" title="Halaman resmi Steam (buka tab baru)">&#8595;</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.games-grid -->
+        <p class="editorial-note" style="margin-top: 18px;">Ukuran instalasi bisa berbeda antar versi, update, atau edisi; sumber: halaman resmi Steam (Okt 2026).</p>
+      </div>
+    </section>
+
+    <!--KATEGORI-->
+    <section class="section" id="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Temukan gaya bermainmu</p>
+            <h2 class="section-title" id="categories-title">KATEGORI GAME</h2>
+          </div>
+        </header>
+
+        <div class="category-grid">
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#128165;</span><h3>ACTION</h3><p>124 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#129517;</span><h3>ADVENTURE</h3><p>87 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#129497;</span><h3>RPG</h3><p>98 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#127919;</span><h3>FPS</h3><p>72 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#127951;</span><h3>RACING</h3><p>56 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#128123;</span><h3>HORROR</h3><p>64 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#9822;&#65039;</span><h3>STRATEGY</h3><p>71 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#127757;</span><h3>OPEN WORLD</h3><p>83 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#127959;</span><h3>SIMULATION</h3><p>49 Game</p></a>
+          <a class="category-card" href="#games"><span class="category-icon" aria-hidden="true">&#9917;</span><h3>SPORTS</h3><p>38 Game</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!--RILIS BARU-->
+    <section class="section section-alt" id="new-releases" aria-labelledby="new-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Baru dirilis</p>
+            <h2 class="section-title" id="new-title">RILIS BARU</h2>
+          </div>
+          <span class="editorial-note">Rilis &amp; rating editorial &#9733; GAMEHUB; data store Okt 2026.</span>
+        </header>
+
+        <div class="release-grid">
+          <article class="release-card">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/black-myth-wukong/cover.webp" alt="Cover resmi Black Myth: Wukong (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-new">BARU</span>
+            </div>
+            <div class="release-info">
+              <h3>Black Myth: Wukong</h3>
+              <p><span class="badge badge-genre">Action RPG</span></p>
+              <ul class="card-meta"><li>&#128197; 19 Agt 2024</li><li>&#9733; 4.7</li><li>&#128190; 130 GB</li></ul>
+              <a class="link-arrow" href="#" aria-label="Halaman resmi Black Myth: Wukong di Steam (buka tab baru)">Nanti ke Steam &#8594;</a>
+            </div>
+          </article>
+
+          <article class="release-card">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/monster-hunter-wilds/cover.webp" alt="Cover resmi Monster Hunter Wilds (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-new">BARU</span>
+            </div>
+            <div class="release-info">
+              <h3>Monster Hunter Wilds</h3>
+              <p><span class="badge badge-genre">Action RPG</span></p>
+              <ul class="card-meta"><li>&#128197; 27 Feb 2025</li><li>&#9733; 4.2</li><li>&#128190; 75 GB</li></ul>
+              <a class="link-arrow" href="#" aria-label="Halaman resmi Monster Hunter Wilds di Steam (buka tab baru)">Nanti ke Steam &#8594;</a>
+            </div>
+          </article>
+
+          <article class="release-card">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/indiana-jones-great-circle/cover.webp" alt="Cover resmi Indiana Jones and the Great Circle (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-new">BARU</span>
+            </div>
+            <div class="release-info">
+              <h3>Indiana Jones and the Great Circle</h3>
+              <p><span class="badge badge-genre">Adventure</span></p>
+              <ul class="card-meta"><li>&#128197; 8 Des 2024</li><li>&#9733; 4.6</li><li>&#128190; 120 GB</li></ul>
+              <a class="link-arrow" href="#" aria-label="Halaman resmi Indiana Jones di Steam (buka tab baru)">Nanti ke Steam &#8594;</a>
+            </div>
+          </article>
+
+          <article class="release-card">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/doom-the-dark-ages/cover.webp" alt="Cover resmi DOOM: The Dark Ages (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-new">BARU</span>
+            </div>
+            <div class="release-info">
+              <h3>DOOM: The Dark Ages</h3>
+              <p><span class="badge badge-genre">FPS Action</span></p>
+              <ul class="card-meta"><li>&#128197; 14 Mei 2025</li><li>&#9733; 4.6</li><li>&#128190; 100 GB</li></ul>
+              <a class="link-arrow" href="#" aria-label="Halaman resmi DOOM: The Dark Ages di Steam (buka tab baru)">Nanti ke Steam &#8594;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!--PREVIEW DETAIL GAME (sumber data Steam) -->
+    <section class="section" id="detail" aria-labelledby="detail-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Contoh halaman detail</p>
+            <h2 class="section-title" id="detail-title">PREVIEW DETAIL GAME</h2>
+          </div>
+          <a class="link-arrow" href="pages/games/cyberpunk-2077.html">Buka halaman Cyberpunk 2077 &#8594;</a>
+        </header>
+
+        <div class="detail">
+          <div class="detail-cover">
+            <div class="cover aspect-portrait">
+              <img src="../public/images/games/cyberpunk-2077/cover.webp" alt="Cover resmi Cyberpunk 2077 (sumber: Steam)" width="600" height="900" loading="lazy">
+              <span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span>
+            </div>
+          </div>
+
+          <div class="detail-info">
+            <div class="badge-row">
+              <span class="badge badge-genre">Action RPG</span>
+              <span class="badge badge-rating">&#9733; 4.6 / 5 editorial</span>
+              <span class="badge badge-updated">TERBARU</span>
+            </div>
+            <h3 class="detail-title">Cyberpunk 2077</h3>
+            <p class="detail-desc">
+              Kisah action-adventure dunia terbuka di Night City — megalopolis yang haus kekuasaan,
+              keglamoran, dan modifikasi tubuh. Berperan sebagai V, mercenary pemburu implant
+              Relic yang menjadi kunci keabadian dan bom waktu di kepalanya sendiri.
+            </p>
+            <dl class="fact-list fact-list-3">
+              <div><dt>Developer</dt><dd>CD PROJEKT RED</dd></div>
+              <div><dt>Publisher</dt><dd>CD PROJEKT RED</dd></div>
+              <div><dt>Rilis</dt><dd>9 Des 2020</dd></div>
+              <div><dt>Ukuran</dt><dd>&plusmn; 70 GB (SSD)</dd></div>
+              <div><dt>Platform</dt><dd>Windows PC</dd></div>
+              <div><dt>Genre</dt><dd>RPG</dd></div>
+            </dl>
+
+            <div class="download-cta">
+              <a class="btn" href="#">
+                <span class="btn-icon">&#128279;</span> HALAMAN RESMI DI STEAM
+              </a>
+              <ul class="mini-info">
+                <li>Data: Steam appdetails, Okt 2026</li>
+                <li>GAMEHUB tidak meng-host file game</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-lower">
+          <div>
+            <h3 class="block-title">SPESIFIKASI SISTEM</h3>
+
+            <details class="accordion" open>
+              <summary>Persyaratan Minimum</summary>
+              <table class="req-table">
+                <tbody>
+                  <tr><th scope="row">OS</th><td>64-bit Windows 10</td></tr>
+                  <tr><th scope="row">Prosesor</th><td>Core i7-6700 / Ryzen 5 1600</td></tr>
+                  <tr><th scope="row">RAM</th><td>12 GB</td></tr>
+                  <tr><th scope="row">GPU</th><td>GeForce GTX 1060 6GB / Radeon RX 580 8GB / Arc A380</td></tr>
+                  <tr><th scope="row">DirectX</th><td>Version 12</td></tr>
+                  <tr><th scope="row">Storage</th><td>70 GB (SSD)</td></tr>
+                </tbody>
+              </table>
+            </details>
+
+            <details class="accordion">
+              <summary>Persyaratan Rekomendasi</summary>
+              <table class="req-table">
+                <tbody>
+                  <tr><th scope="row">OS</th><td>64-bit Windows 10</td></tr>
+                  <tr><th scope="row">Prosesor</th><td>Core i7-12700 / Ryzen 7 7800X3D</td></tr>
+                  <tr><th scope="row">RAM</th><td>16 GB</td></tr>
+                  <tr><th scope="row">GPU</th><td>GeForce RTX 2060 SUPER / Radeon RX 5700 XT / Arc A770</td></tr>
+                  <tr><th scope="row">DirectX</th><td>Version 12</td></tr>
+                  <tr><th scope="row">Storage</th><td>70 GB (SSD)</td></tr>
+                </tbody>
+              </table>
+            </details>
+            <p class="req-note">Sumber: Steam appdetails (diakses 13 Okt 2026). Spesifikasi dapat berubah lewat pembaruan; cek halaman resmi untuk data terkini.</p>
+          </div>
+
+          <div>
+            <h3 class="block-title">CARA MEMILIKI GAME</h3>
+
+            <details class="accordion" open>
+              <summary><span class="summary-icon" aria-hidden="true">&#128279;</span> TOKO RESMI STEAM</summary>
+              <dl class="option-info">
+                <div><dt>Sumber</dt><dd>store.steampowered.com</dd></div>
+                <div><dt>Platform</dt><dd>Windows PC</dd></div>
+                <div><dt>Status</dt><dd>Tautan asli (buka tab baru)</dd></div>
+              </dl>
+              <a class="btn btn-sm" href="#">&#128279; BUKA STEAM</a>
+            </details>
+
+            <details class="accordion">
+              <summary><span class="summary-icon" aria-hidden="true">&#129524;</span> HALAMAN DETAIL LENGKAP</summary>
+              <dl class="option-info">
+                <div><dt>Isi</dt><dd>Deskripsi, fitur, screenshot</dd></div>
+                <div><dt>Format</dt><dd>Halaman statis GAMEHUB</dd></div>
+                <div><dt>Ulasan</dt><dd>Spesifikasi + tautan resmi</dd></div>
+              </dl>
+              <a class="btn btn-sm" href="pages/games/cyberpunk-2077.html">&#8594; BUKA HALAMAN</a>
+            </details>
+
+            <details class="accordion">
+              <summary><span class="summary-icon" aria-hidden="true">&#128217;</span> INFORMASI</summary>
+              <dl class="option-info">
+                <div><dt>GAMEHUB</dt><dd>Indeks katalog, bukan toko</dd></div>
+                <div><dt>Pembelian</dt><dd>via toko resmi publisher</dd></div>
+              </dl>
+            </details>
+          </div>
+        </div>
+
+        <h3 class="block-title block-title-gap">SCREENSHOTS</h3>
+        <div class="gallery">
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/black-myth-wukong/ss-1.webp" alt="Tangkapan layar gameplay Black Myth: Wukong (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption><img class="capsule-logo" src="../public/images/games/black-myth-wukong/capsule.webp" alt="Logo Black Myth: Wukong (sumber: Steam)" width="231" height="87" loading="lazy"> Black Myth: Wukong</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/monster-hunter-wilds/ss-1.webp" alt="Tangkapan layar gameplay Monster Hunter Wilds (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption><img class="capsule-logo" src="../public/images/games/monster-hunter-wilds/capsule.webp" alt="Logo Monster Hunter Wilds (sumber: Steam)" width="231" height="87" loading="lazy"> Monster Hunter Wilds</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/indiana-jones-great-circle/ss-1.webp" alt="Tangkapan layar gameplay Indiana Jones and the Great Circle (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption><img class="capsule-logo" src="../public/images/games/indiana-jones-great-circle/capsule.webp" alt="Logo Indiana Jones and the Great Circle (sumber: Steam)" width="231" height="87" loading="lazy"> Indiana Jones and the Great Circle</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/doom-the-dark-ages/ss-1.webp" alt="Tangkapan layar gameplay DOOM: The Dark Ages (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption><img class="capsule-logo" src="../public/images/games/doom-the-dark-ages/capsule.webp" alt="Logo DOOM: The Dark Ages (sumber: Steam)" width="231" height="87" loading="lazy"> DOOM: The Dark Ages</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/black-myth-wukong/header.webp" alt="Banner resmi Black Myth: Wukong (sumber: Steam)" loading="lazy" width="460" height="215">
+            <figcaption><img class="capsule-logo" src="../public/images/games/black-myth-wukong/capsule.webp" alt="" width="231" height="87" loading="lazy"> Black Myth: Wukong — banner resmi</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/black-myth-wukong/ss-2.webp" alt="Tangkapan layar gameplay Black Myth: Wukong 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Black Myth: Wukong &mdash; 2</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/monster-hunter-wilds/header.webp" alt="Banner resmi  Monster Hunter Wilds 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Monster Hunter Wilds &mdash; 2</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/indiana-jones-great-circle/header.webp" alt="Banner resmi  Indiana Jones and the Great Circle 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Indiana Jones and the Great Circle &mdash; 2</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <img src="../public/images/games/doom-the-dark-ages/header.webp" alt="Banner resmi  DOOM: The Dark Ages 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>DOOM: The Dark Ages &mdash; 2</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/black-myth-wukong/ss-3.webp" alt="Tangkapan layar gameplay Black Myth: Wukong 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Black Myth: Wukong &mdash; 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/monster-hunter-wilds/ss-3.webp" alt="Tangkapan layar gameplay Monster Hunter Wilds 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Monster Hunter Wilds &mdash; 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/indiana-jones-great-circle/ss-3.webp" alt="Tangkapan layar gameplay Indiana Jones and the Great Circle 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Indiana Jones and the Great Circle &mdash; 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/doom-the-dark-ages/ss-3.webp" alt="Tangkapan layar gameplay DOOM: The Dark Ages 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>DOOM: The Dark Ages &mdash; 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/black-myth-wukong/ss-4.webp" alt="Tangkapan layar gameplay Black Myth: Wukong 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Black Myth: Wukong &mdash; 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/monster-hunter-wilds/ss-4.webp" alt="Tangkapan layar gameplay Monster Hunter Wilds 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Monster Hunter Wilds &mdash; 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/indiana-jones-great-circle/ss-4.webp" alt="Tangkapan layar gameplay Indiana Jones and the Great Circle 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Indiana Jones and the Great Circle &mdash; 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/doom-the-dark-ages/ss-4.webp" alt="Tangkapan layar gameplay DOOM: The Dark Ages 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>DOOM: The Dark Ages &mdash; 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/black-myth-wukong/ss-2.webp" alt="Tangkapan layar gameplay Black Myth: Wukong (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Black Myth: Wukong — SSD Bianglala</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/monster-hunter-wilds/ss-2.webp" alt="Tangkapan layar gameplay Monster Hunter Wilds (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Monster Hunter Wilds — Badai di Lembah</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/indiana-jones-great-circle/ss-2.webp" alt="Tangkapan layar gameplay Indiana Jones (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Indiana Jones — Vatican Nights</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/doom-the-dark-ages/ss-2.webp" alt="Tangkapan layar gameplay DOOM: The Dark Ages (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>DOOM: The Dark Ages — Naga dan Perisai</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/cyberpunk-2077/ss-1.webp" alt="Tangkapan layar gameplay Cyberpunk 2077 1 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Night City</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/cyberpunk-2077/ss-2.webp" alt="Tangkapan layar gameplay Cyberpunk 2077 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Gameplay</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/cyberpunk-2077/ss-3.webp" alt="Tangkapan layar gameplay Cyberpunk 2077 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Aksi di jalanan</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/cyberpunk-2077/ss-4.webp" alt="Tangkapan layar gameplay Cyberpunk 2077 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Mob di metro Night City</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/doom-eternal/ss-4.webp" alt="Tangkapan layar gameplay DOOM Eternal (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Rip &amp; tear</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/god-of-war/ss-4.webp" alt="Tangkapan layar gameplay God of War (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Dunia nordik</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/dead-space/ss-1.webp" alt="Tangkapan layar gameplay Dead Space (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>The Ishimura</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/metro-exodus/ss-2.webp" alt="Tangkapan layar gameplay Metro Exodus 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Metro Exodus — 2</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/metro-exodus/ss-3.webp" alt="Tangkapan layar gameplay Metro Exodus 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Metro Exodus — 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/metro-exodus/ss-4.webp" alt="Tangkapan layar gameplay Metro Exodus 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Metro Exodus — 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/dead-space/ss-2.webp" alt="Tangkapan layar gameplay Dead Space 2 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Dead Space — 2</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/dead-space/ss-3.webp" alt="Tangkapan layar gameplay Dead Space 3 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Dead Space — 3</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/dead-space/ss-4.webp" alt="Tangkapan layar gameplay Dead Space 4 (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Dead Space — 4</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../public/images/games/metro-exodus/ss-1.webp" alt="Tangkapan layar gameplay Metro Exodus (sumber: Steam)" loading="lazy" width="800" height="500">
+            <figcaption>Perjalanan Aurora</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!--STORE RESMI (pengganti download) -->
+    <section class="section section-alt" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <div class="download-card">
+          <p class="eyebrow">Pusat tautan resmi</p>
+          <h2 class="section-title center" id="download-title">SIAP DIMAINKAN?</h2>
+          <p class="download-lead" style="margin: 18px auto 0; max-width: 560px;">Katalog unggulan GAMEHUB terhubung ke halaman resmi masing-masing game di Steam. Situs ini adalah demo statis tanpa backend, jadi unduhan selalu ditangani oleh toko resmi.</p>
+
+          <div class="store-row">
+            <a class="store-tile" href="#">
+              <strong>Cyberpunk 2077</strong>
+              <span>Rilis 2020 · &plusmn;70 GB</span>
+              <small class="editorial-note">buka tab baru / Steam</small>
+            </a>
+            <a class="store-tile" href="#">
+              <strong>Elden Ring</strong>
+              <span>Rilis 2022 · &plusmn;60 GB</span>
+              <small class="editorial-note">buka tab baru / Steam</small>
+            </a>
+            <a class="store-tile" href="#">
+              <strong>Red Dead Redemption 2</strong>
+              <span>Rilis 2019 · &plusmn;150 GB</span>
+              <small class="editorial-note">buka tab baru / Steam</small>
+            </a>
+          </div>
+
+          <dl class="info-grid">
+            <div><dt>Ukuran file</dt><dd>per game</dd></div>
+            <div><dt>Rilis</dt><dd>per game</dd></div>
+            <div><dt>Platform</dt><dd>Windows PC</dd></div>
+            <div><dt>Vendor</dt><dd>studi resmi</dd></div>
+            <div><dt>Status</dt><dd>demo statis</dd></div>
+          </dl>
+
+          <details class="accordion accordion-center">
+            <summary>Informasi Demo</summary>
+            <p class="info-text">
+              GAMEHUB hanya menyediakan katalog informasi. Semua tautan dari situs ini
+              mengarah ke halaman resmi store, jadi pembelian dilakukan pada sumber yang benar.
+              GAMEHUB tidak meng-host file game apa pun.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!--KENAPA GAMEHUB-->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head section-head-center">
+          <div>
+            <p class="eyebrow">Tentang kami</p>
+            <h2 class="section-title center" id="about-title">KENAPA GAMEHUB?</h2>
+          </div>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#9889;</span>
+            <h3>INFO LANGSUNG</h3>
+            <p>Spesifikasi, ukuran file, dan rating tersaji singkat.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#128218;</span>
+            <h3>KATALOG BESAR</h3>
+            <p>16 judul populer lengkap dengan halaman detail.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#128737;&#65039;</span>
+            <h3>AMAN &amp; TERVERIFIKASI</h3>
+            <p>Data game dari halaman resmi Steam; tautan ke sumber resmi.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">&#10024;</span>
+            <h3>MUDAH DIGUNAKAN</h3>
+            <p>Antarmuka ringan tanpa JavaScript — akses cepat di berbagai perangkat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--NEWSLETTER (demo UI, tanpa backend) -->
+    <section class="section newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter">
+          <div class="newsletter-copy">
+            <h2 class="section-title" id="newsletter-title">TETAP TERHUBUNG</h2>
+            <p>Dapatkan rilis game terbaru, pembaruan, dan berita gaming.</p>
+          </div>
+          <form class="newsletter-form" action="#newsletter">
+            <div>
+              <label class="visually-hidden" for="newsletter-email">Alamat email</label>
+              <input id="newsletter-email" type="email" name="email" placeholder="Masukkan email kamu" autocomplete="email" required>
+              <p class="editorial-note" style="margin-top: 8px;">Demo UI — pengiriman data belum berfungsi (tanpa backend).</p>
+            </div>
+            <button class="btn" type="submit">LANGGANAN</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#home" aria-label="GAMEHUB beranda">
+          <span class="logo-mark" aria-hidden="true">G</span>
+          <span class="logo-text">GAME<span>HUB</span></span>
+        </a>
+        <p>Destinasi gaming PC datamu: informasi terkurasi, tautan resmi, tanpa pihak tidak resmi.</p>
+        <p class="editorial-note" style="max-width: 300px; margin-top: 8px;">Situs demo statis untuk tugas PPWEB. Follow sosial demo belum aktif (tanpa akun asli).</p>
+      </div>
+
+      <nav aria-label="Tautan cepat">
+        <h3>LINK CEPAT</h3>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#categories">Kategori</a></li>
+          <li><a href="#popular">Populer</a></li>
+          <li><a href="#new-releases">Rilis Baru</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Genre">
+        <h3>GENRE</h3>
+        <ul>
+          <li><a href="#games">Action</a></li>
+          <li><a href="#games">RPG</a></li>
+          <li><a href="#games">Horror</a></li>
+          <li><a href="#games">Racing</a></li>
+          <li><a href="#games">FPS</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Bantuan">
+        <h3>BANTUAN</h3>
+        <ul>
+          <li><a href="#about">Tentang GAMEHUB</a></li>
+          <li><a href="#download">Sumber resmi</a></li>
+          <li><a href="#newsletter">Berita demo</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 GAMEHUB. Semua hak untuk masing-masing pemilik konten game.</p>
+        <p class="disclaimer">Informasi game menggunakan data resmi Steam; tombol unduh mengarah ke halaman resmi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="back-to-top" href="#home" aria-label="Kembali ke atas">
+    <span aria-hidden="true">&#8593;</span>
+    <span class="back-label">KE ATAS</span>
+  </a>
+
+  <!--LOGIN MODAL (demo UI) -->
+  <div class="modal-wrap">
+    <input type="checkbox" id="login-toggle" class="modal-toggle" aria-label="Buka panel login">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <label class="modal-backdrop" for="login-toggle" aria-label="Tutup panel login"></label>
+      <div class="modal-panel login-panel">
+        <label class="modal-close" for="login-toggle" aria-label="Tutup">&#10005;</label>
+        <div class="login-body">
+          <span class="logo-mark" aria-hidden="true">G</span>
+          <h2 id="login-title">Selamat datang kembali</h2>
+          <p class="login-sub">Masuk untuk simpan favorit dan lacak pengunduhanmu.</p>
+          <form class="login-form" action="#home">
+            <div class="form-field">
+              <label for="login-email">Email</label>
+              <input id="login-email" type="email" name="email" placeholder="kamu@contoh.com" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="login-password">Kata sandi</label>
+              <input id="login-password" type="password" name="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" autocomplete="current-password" required>
+            </div>
+            <div class="form-row">
+              <span class="check">
+                <input id="login-remember" type="checkbox" name="remember">
+                <label for="login-remember">Ingat saya</label>
+              </span>
+              <a href="#about">Lupa kata sandi?</a>
+            </div>
+            <button class="btn btn-block" type="submit">MASUK</button>
+          </form>
+          <p class="login-foot">Belum punya akun? <a href="#about">Daftar</a> &nbsp;&mdash;&nbsp; <span class="editorial-note">Demo UI: login belum aktif (situs statis).</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL GAME (checkbox state, tanpa JS) -->
+  <div class="modals">
+
+    <!-- Modal 1: Cyberpunk 2077 -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-1" class="modal-toggle" aria-label="Tampilkan detail Cyberpunk 2077">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <label class="modal-backdrop" for="modal-1" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-1" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/cyberpunk-2077/header.webp" alt="Banner resmi Cyberpunk 2077 (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span><span class="badge badge-genre">Action RPG</span><span class="badge badge-rating">&#9733; 4.6</span></div>
+            <h2 id="modal-1-title">Cyberpunk 2077</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>CD PROJEKT RED</dd></div><div><dt>Publisher</dt><dd>CD PROJEKT RED</dd></div><div><dt>Rilis</dt><dd>9 Des 2020</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 70 GB (SSD)</dd></div></dl>
+            <p class="modal-desc">Action RPG dunia-terbuka di Night City. Sebagai V, kamu memburu implant Relic yang jadi kunci keabadian sekaligus bom waktu di kepalamu sendiri.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>64-bit Windows 10</td><td>64-bit Windows 10</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i7-6700 / R5 1600</td><td>i7-12700 / R7 7800X3D</td></tr>
+                <tr><th scope="row">RAM</th><td>12 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1060 6GB / RX 580 8GB</td><td>RTX 2060 SUPER / RX 5700 XT</td></tr>
+                <tr><th scope="row">Storage</th><td>70 GB (SSD)</td><td>70 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/cyberpunk-2077.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-1">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Red Dead Redemption 2 -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-2" class="modal-toggle" aria-label="Tampilkan detail Red Dead Redemption 2">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+        <label class="modal-backdrop" for="modal-2" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-2" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/red-dead-redemption-2/header.webp" alt="Banner resmi Red Dead Redemption 2 (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-trending">TRENDING</span><span class="badge badge-genre">Action Adventure</span><span class="badge badge-rating">&#9733; 4.8</span></div>
+            <h2 id="modal-2-title">Red Dead Redemption 2</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Rockstar Games</dd></div><div><dt>Publisher</dt><dd>Rockstar Games</dd></div><div><dt>Rilis (PC)</dt><dd>5 Des 2019</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 150 GB</dd></div></dl>
+            <p class="modal-desc">Epik western sinematik di tahun 1899. Ikuti Arthur Morgan dan geng Van der Linde bertahan di Amerika yang terus berubah.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10 64-bit</td><td>Windows 10 64-bit</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-2500K / FX-6300</td><td>i7-4770K / R5 1500X</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>12 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 770 2GB / R9 280 3GB</td><td>GTX 1060 6GB / RX 480 4GB</td></tr>
+                <tr><th scope="row">Storage</th><td>150 GB</td><td>150 GB</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/red-dead-redemption-2.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-2">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Elden Ring -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-3" class="modal-toggle" aria-label="Tampilkan detail Elden Ring">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+        <label class="modal-backdrop" for="modal-3" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-3" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/elden-ring/header.webp" alt="Banner resmi Elden Ring (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-popular">&#128293; POPULER</span><span class="badge badge-genre">Action RPG</span><span class="badge badge-rating">&#9733; 4.8</span></div>
+            <h2 id="modal-3-title">Elden Ring</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>FromSoftware</dd></div><div><dt>Publisher</dt><dd>FromSoftware / Bandai Namco</dd></div><div><dt>Rilis</dt><dd>24 Feb 2022</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 60 GB</dd></div></dl>
+            <p class="modal-desc">Action RPG fantasi diႌ Lands Between. Kuasai tempur berat, temukan tempat tersembunyi, dan bentuk Tarnished-mu lewat sistem build.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10</td><td>Windows 10/11</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-8400 / R3 3300X</td><td>i7-8700K / R5 3600X</td></tr>
+                <tr><th scope="row">RAM</th><td>12 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1060 3GB / RX 580 4GB</td><td>GTX 1070 8GB / RX Vega 56 8GB</td></tr>
+                <tr><th scope="row">Storage</th><td>60 GB</td><td>60 GB</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/elden-ring.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-3">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: Grand Theft Auto V -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-4" class="modal-toggle" aria-label="Tampilkan detail Grand Theft Auto V">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+        <label class="modal-backdrop" for="modal-4" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-4" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/grand-theft-auto-v/header.webp" alt="Banner resmi Grand Theft Auto V (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-updated">TERBARU</span><span class="badge badge-genre">Action Adventure</span><span class="badge badge-rating">&#9733; 4.7</span></div>
+            <h2 id="modal-4-title">Grand Theft Auto V</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Rockstar North</dd></div><div><dt>Publisher</dt><dd>Rockstar Games</dd></div><div><dt>Rilis (PC)</dt><dd>13 Apr 2015</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 125 GB</dd></div></dl>
+            <p class="modal-desc">Tiga penjahat, satu kota besar. Berganti karakter, rencanakan heist, dan jelajahi Los Santos &amp; Blaine County.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10 64-bit</td><td>Windows 10 64-bit</td></tr>
+                <tr><th scope="row">Prosesor</th><td>Core 2 Quad Q6600 / Phenom 9850</td><td>i5 3470 / FX-8350</td></tr>
+                <tr><th scope="row">RAM</th><td>4 GB</td><td>8 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>9800 GT 1GB / HD 4870 1GB</td><td>GTX 660 2GB / HD 7870 2GB</td></tr>
+                <tr><th scope="row">Storage</th><td>125 GB</td><td>125 GB</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/grand-theft-auto-v.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-4">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5: Hogwarts Legacy -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-5" class="modal-toggle" aria-label="Tampilkan detail Hogwarts Legacy">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+        <label class="modal-backdrop" for="modal-5" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-5" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/hogwarts-legacy/header.webp" alt="Banner resmi Hogwarts Legacy (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span><span class="badge badge-genre">RPG Adventure</span><span class="badge badge-rating">&#9733; 4.5</span></div>
+            <h2 id="modal-5-title">Hogwarts Legacy</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Avalanche Software</dd></div><div><dt>Publisher</dt><dd>Warner Bros. Games</dd></div><div><dt>Rilis</dt><dd>10 Feb 2023</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 85 GB</dd></div></dl>
+            <p class="modal-desc">Hidupi kisah penyihirmu sendiri di Hogwarts era 1800-an. Masuk kelas, pelajari mantera, seduh ramuan, dan ungkap rahasia kuno.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>64-bit Windows 10</td><td>64-bit Windows 10</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-6600 / R5 1400</td><td>i7-8700 / R5 3600</td></tr>
+                <tr><th scope="row">RAM</th><td>16 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 960 4GB / RX 470 4GB</td><td>GTX 1080 Ti / RX 5700 XT</td></tr>
+                <tr><th scope="row">Storage</th><td>85 GB</td><td>85 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/hogwarts-legacy.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-5">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6: Forza Horizon 5 -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-6" class="modal-toggle" aria-label="Tampilkan detail Forza Horizon 5">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-6-title">
+        <label class="modal-backdrop" for="modal-6" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-6" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/forza-horizon-5/header.webp" alt="Banner resmi Forza Horizon 5 (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-trending">TRENDING</span><span class="badge badge-genre">Racing</span><span class="badge badge-rating">&#9733; 4.7</span></div>
+            <h2 id="modal-6-title">Forza Horizon 5</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Playground Games</dd></div><div><dt>Publisher</dt><dd>Xbox Game Studios</dd></div><div><dt>Rilis</dt><dd>8 Nov 2021</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 110 GB</dd></div></dl>
+            <p class="modal-desc">Jelajahi dunia terbuka Meksiko yang menakjubkan. Balap ratusan mobil lewat gurun, hutan, dan kota dalam festival yang selalu berganti.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10 (18362+)</td><td>Windows 10/11</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-4460 / R3 1200</td><td>i5-8400 / R5 1500X</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 970 / RX 470</td><td>GTX 1070 / RX 590</td></tr>
+                <tr><th scope="row">Storage</th><td>110 GB</td><td>110 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/forza-horizon-5.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-6">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 7: The Witcher 3 -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-7" class="modal-toggle" aria-label="Tampilkan detail The Witcher 3: Wild Hunt">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-7-title">
+        <label class="modal-backdrop" for="modal-7" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-7" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/the-witcher-3/header.webp" alt="Banner resmi The Witcher 3: Wild Hunt (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-popular">&#128293; POPULER</span><span class="badge badge-genre">RPG Adventure</span><span class="badge badge-rating">&#9733; 4.9</span></div>
+            <h2 id="modal-7-title">The Witcher 3: Wild Hunt — Remastered</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>CD PROJEKT RED</dd></div><div><dt>Publisher</dt><dd>CD PROJEKT RED</dd></div><div><dt>Rilis</dt><dd>18 Mei 2015</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 50 GB (SSD)</dd></div></dl>
+            <p class="modal-desc">Berperan sebagai pemburu monster Geralt of Rivia di dunia terbuka yang dilanda perang. Ikuti kontrak, buat keputusan penuh risiko, dan cari Ciri.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>64-bit Windows 11</td><td>64-bit Windows 11</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-8400 / R5 2600</td><td>i7-8700K / R5 3600X</td></tr>
+                <tr><th scope="row">RAM</th><td>12 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1660 / RX 5500 XT 8GB</td><td>RTX 2060 Super / RX 6600 XT</td></tr>
+                <tr><th scope="row">Storage</th><td>60 GB (SSD)</td><td>60 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/the-witcher-3.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-7">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 8: God of War -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-8" class="modal-toggle" aria-label="Tampilkan detail God of War">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-8-title">
+        <label class="modal-backdrop" for="modal-8" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-8" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/god-of-war/header.webp" alt="Banner resmi God of War (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span><span class="badge badge-genre">Action Adventure</span><span class="badge badge-rating">&#9733; 4.8</span></div>
+            <h2 id="modal-8-title">God of War</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Santa Monica Studio</dd></div><div><dt>Publisher</dt><dd>PlayStation Publishing LLC</dd></div><div><dt>Rilis (PC)</dt><dd>14 Jan 2022</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 70 GB</dd></div></dl>
+            <p class="modal-desc">Kratos dan putranya Atreus menempuh mitologi nordik — kisah tentang menjadi ayah, dengan tempur berbobot dan skala pertempuran megah.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10</td><td>Windows 10</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-2500K / R3 1200</td><td>i5-6600K / R5 2400G</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>8 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 960 4GB / R9 290X 4GB</td><td>GTX 1060 6GB / RX 570 4GB</td></tr>
+                <tr><th scope="row">Storage</th><td>70 GB</td><td>70 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/god-of-war.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-8">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 9: Resident Evil 4 -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-9" class="modal-toggle" aria-label="Tampilkan detail Resident Evil 4">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-9-title">
+        <label class="modal-backdrop" for="modal-9" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-9" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/resident-evil-4/header.webp" alt="Banner resmi Resident Evil 4 (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-popular">&#128293; POPULER</span><span class="badge badge-genre">Horror Action</span><span class="badge badge-rating">&#9733; 4.7</span></div>
+            <h2 id="modal-9-title">Resident Evil 4</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Capcom</dd></div><div><dt>Publisher</dt><dd>Capcom</dd></div><div><dt>Rilis</dt><dd>23 Mar 2023</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 60 GB</dd></div></dl>
+            <p class="modal-desc">Imajinasi ulang modern dari klasik survival horror. Leon S. Kennedy ke desa terpencil di Eropa untuk menyelamatkan putri Presiden.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10 64-bit</td><td>Windows 10/11 64-bit</td></tr>
+                <tr><th scope="row">Prosesor</th><td>R3 1200 / i5-7500</td><td>R5 3600 / i7-8700</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1050 Ti / RX 560</td><td>GTX 1070 / RX 5700</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah. Steam tidak mencantumkan baris storage khusus; ukuran bukan dari sumber resmi.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/resident-evil-4.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-9">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 10: DOOM Eternal -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-10" class="modal-toggle" aria-label="Tampilkan detail DOOM Eternal">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-10-title">
+        <label class="modal-backdrop" for="modal-10" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-10" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/doom-eternal/header.webp" alt="Banner resmi DOOM Eternal (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-trending">TRENDING</span><span class="badge badge-genre">FPS Action</span><span class="badge badge-rating">&#9733; 4.6</span></div>
+            <h2 id="modal-10-title">DOOM Eternal</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>id Software</dd></div><div><dt>Publisher</dt><dd>Bethesda Softworks</dd></div><div><dt>Rilis</dt><dd>19 Mar 2020</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 80 GB</dd></div></dl>
+            <p class="modal-desc">Tempur first-person cepat dan brutal sebagai Doom Slayer. Rip &amp; tear melalui horde demon di desa maut dan dunia gila.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>64-bit Windows 7 / 10</td><td>64-bit Windows 10</td></tr>
+                <tr><th scope="row">Prosesor</th><td>Core i5 3.3 GHz / R3 1300X</td><td>i7-6700K / R7 1800X</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>8 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1050 Ti / R9 280</td><td>GTX 1060 6GB / RX 480</td></tr>
+                <tr><th scope="row">Storage</th><td>80 GB</td><td>80 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <a class="btn btn-outline" href="pages/games/doom-eternal.html">HALAMAN DETAIL &#8594;</a>
+              <label class="btn btn-outline" for="modal-10">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 11: Dead Space -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-11" class="modal-toggle" aria-label="Tampilkan detail Dead Space">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-11-title">
+        <label class="modal-backdrop" for="modal-11" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-11" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/dead-space/header.webp" alt="Banner resmi Dead Space (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-updated">TERBARU</span><span class="badge badge-genre">Horror Action</span><span class="badge badge-rating">&#9733; 4.5</span></div>
+            <h2 id="modal-11-title">Dead Space</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>Motive</dd></div><div><dt>Publisher</dt><dd>Electronic Arts</dd></div><div><dt>Rilis</dt><dd>27 Jan 2023</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 50 GB (SSD)</dd></div></dl>
+            <p class="modal-desc">Engineer Isaac Clarke terjebak memperbaiki kapal antariksa yang dihuni ancaman mengerikan. Sci-fi survival horror yang membangun ulang dari aslinya.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 10 64-bit</td><td>Windows 10 64-bit</td></tr>
+                <tr><th scope="row">Prosesor</th><td>i5-8600 / R5 2600X</td><td>i5-11600K / R5 5600X</td></tr>
+                <tr><th scope="row">RAM</th><td>16 GB</td><td>16 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 1070 / RX 5700</td><td>RTX 2070 / RX 6700 XT</td></tr>
+                <tr><th scope="row">Storage</th><td>50 GB (SSD)</td><td>50 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <label class="btn btn-outline" for="modal-11">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 12: Metro Exodus -->
+    <div class="modal-wrap">
+      <input type="checkbox" id="modal-12" class="modal-toggle" aria-label="Tampilkan detail Metro Exodus">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-12-title">
+        <label class="modal-backdrop" for="modal-12" aria-label="Tutup detail"></label>
+        <div class="modal-panel">
+          <label class="modal-close" for="modal-12" aria-label="Tutup">&#10005;</label>
+          <div class="modal-cover">
+            <img src="../public/images/games/metro-exodus/header.webp" alt="Banner resmi Metro Exodus (sumber: Steam)" width="460" height="215" loading="lazy">
+          </div>
+          <div class="modal-body">
+            <div class="badge-row"><span class="badge badge-verified">&#10003; GAME TERVERIFIKASI</span><span class="badge badge-genre">FPS Horror</span><span class="badge badge-rating">&#9733; 4.5</span></div>
+            <h2 id="modal-12-title">Metro Exodus</h2>
+            <dl class="fact-list"><div><dt>Developer</dt><dd>4A Games</dd></div><div><dt>Publisher</dt><dd>Deep Silver</dd></div><div><dt>Rilis (PC)</dt><dd>14 Feb 2020</dd></div><div><dt>Ukuran</dt><dd>&plusmn; 59 GB</dd></div></dl>
+            <p class="modal-desc">Kabur dari reruntuhan Moskwa bersama kapal Aurora dan menembus kisah dunia permintaan. FPS mencekam dengan stealth dan survival, sekaligus kisah bebasnya.</p>
+            <h3>SPESIFIKASI SISTEM</h3>
+            <table class="req-table req-table-3">
+              <thead><tr><th scope="col">Spesifikasi</th><th scope="col">Minimum</th><th scope="col">Rekomendasi</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">OS</th><td>Windows 7/8/10</td><td>Windows 10</td></tr>
+                <tr><th scope="row">Prosesor</th><td>Core i5-4440</td><td>Core i7-4770K</td></tr>
+                <tr><th scope="row">RAM</th><td>8 GB</td><td>8 GB</td></tr>
+                <tr><th scope="row">GPU</th><td>GTX 670 / HD 7870</td><td>GTX 1070 / RTX 2060 / RX Vega 56</td></tr>
+                <tr><th scope="row">Storage</th><td>59 GB</td><td>59 GB (SSD)</td></tr>
+              </tbody>
+            </table>
+            <p class="req-note">Sumber: Steam appdetails (Okt 2026); dapat berubah.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#"><span class="btn-icon">&#128279;</span> HALAMAN RESMI STEAM</a>
+              <label class="btn btn-outline" for="modal-12">TUTUP</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

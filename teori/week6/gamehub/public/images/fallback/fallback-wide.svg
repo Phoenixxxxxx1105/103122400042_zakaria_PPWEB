@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Gambar tidak tersedia">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101522" />
+      <stop offset="0.5" stop-color="#151b2b" />
+      <stop offset="1" stop-color="#1b1233" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" />
+  <g stroke="url(#accent)" stroke-width="2" opacity="0.25">
+    <path d="M0 380l180-120 160 100 140-90 320 150" fill="none" />
+    <path d="M0 440l200-120 150 90 170-110 280 120" fill="none" />
+  </g>
+  <circle cx="400" cy="220" r="74" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.8" />
+  <path d="M400 160l17 43 46 4-35 30 11 45-39-24-39 24 11-45-35-30 46-4z" fill="url(#accent)" opacity="0.85" />
+  <text x="400" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700" letter-spacing="6" text-anchor="middle" fill="#ffffff">GAMEHUB</text>
+  <text x="400" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="14" letter-spacing="1" text-anchor="middle" fill="#94a3b8">Gambar tidak tersedia secara lokal</text>
+</svg>
