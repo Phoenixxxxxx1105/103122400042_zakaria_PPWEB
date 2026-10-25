@@ -1,0 +1,155 @@
+@layer components {
+  @media (max-width: 1279px) {
+    :root {
+      --nav-h: 64px;
+    }
+
+    .hub-container {
+      width: calc(100% - 32px);
+    }
+
+    .nav-panel {
+      position: fixed;
+      top: var(--nav-h);
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+      max-height: calc(100dvh - var(--nav-h));
+      padding: 16px 20px 24px;
+      overflow-y: auto;
+      border-bottom: 1px solid var(--border);
+      background: #080b12;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    .nav-panel.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav-link {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .nav-link::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .modal-overlay {
+      padding: 0;
+    }
+
+    .modal-panel {
+      width: 100%;
+      max-height: 100dvh;
+      min-height: 100dvh;
+      border-radius: 0;
+      border: 0;
+    }
+
+    .modal-banner {
+      border-radius: 0;
+      aspect-ratio: 16 / 8;
+    }
+
+    .lightbox-panel {
+      max-height: 100dvh;
+    }
+
+    .lightbox-panel img {
+      max-height: calc(100dvh - 160px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-title {
+      font-size: clamp(1.45rem, 6vw, 1.9rem);
+    }
+
+    .hero-cover {
+      width: min(240px, 62vw);
+    }
+
+    .hero-cover-text {
+      font-size: 1.2rem;
+    }
+
+    .float-card-1 {
+      top: 10% !important;
+      left: 0 !important;
+      transform: scale(0.88);
+      transform-origin: left top;
+    }
+
+    .float-card-2 {
+      right: 0 !important;
+      bottom: 8% !important;
+      transform: scale(0.88);
+      transform-origin: right bottom;
+    }
+
+    .fact-list,
+    .fact-list-3 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .back-label {
+      display: none;
+    }
+
+    .back-to-top {
+      padding: 12px;
+      width: 44px;
+      height: 44px;
+      justify-content: center;
+    }
+
+    .modal-tabs {
+      overflow-x: auto;
+      padding-bottom: 4px;
+      flex-wrap: nowrap !important;
+    }
+
+    .modal-tab {
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .hub-container {
+      width: calc(100% - 24px);
+    }
+
+  }
+
+  @media (hover: none) {
+    .cover-overlay {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .game-card .card-actions .btn {
+      flex: 1;
+    }
+  }
+}
