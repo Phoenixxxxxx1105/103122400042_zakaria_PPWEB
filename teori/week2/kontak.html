@@ -2,27 +2,38 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kontak Kami</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Menu Navigasi -->
-    <a href="index.html">Beranda</a> |
-    <a href="registrasi.html">Pendaftaran</a> |
-    <a href="galeri.html">Galeri</a> |
-    <a href="member.html">Member</a> |
-    <a href="kontak.html">Kontak Kami</a>
-    <hr>
 
-    <h1>Hubungi Kami</h1>
-    <p>Jika ada pertanyaan terkait pendaftaran, silakan hubungi kami melalui:</p>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="registrasi.html">Pendaftaran</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="member.html">Member</a>
+        <a href="kontak.html" class="aktif">Kontak Kami</a>
+    </nav>
 
-    <ul>
-        <li>Email: admin@websitekami.com</li>
-        <li>Telepon: 0812-3456-7890</li>
-        <li>Alamat: Jl. Raya Purwokerto No. 10, Banyumas</li>
-    </ul>
+    <main>
+        <h1>Hubungi Kami</h1>
+        <p class="lead">Jika ada pertanyaan terkait pendaftaran, silakan hubungi kami melalui:</p>
 
-    <hr>
-    <p><i>Footer: Hak Cipta 2026 - Website Saya</i></p>
+        <div class="panel">
+            <ul class="kontak">
+                <li><b>Email</b> <span>admin@websitekami.com</span></li>
+                <li><b>Telepon</b> <span>0812-3456-7890</span></li>
+                <li><b>Alamat</b> <span>Jl. Raya Purwokerto No. 10, Banyumas</span></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hak Cipta 2026 - Website Zakaria</p>
+    </footer>
 </body>
 </html>

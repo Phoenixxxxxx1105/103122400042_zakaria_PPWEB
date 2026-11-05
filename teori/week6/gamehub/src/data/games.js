@@ -1,21 +1,3 @@
-/**
- * GAMEHUB — data katalog game.
- *
- * CATATAN SUMBER DATA
- * -------------------
- * - 12 game pertama adalah game yang sudah ada pada file sumber GAMEHUB
- *   (kartu katalog + modal detail + halaman detail statis).
- * - 4 game "rilis baru" adalah game yang sudah ada pada section New Releases
- *   di file sumber, kini dilengkapi data detail.
- * - Semua artwork (cover, banner, capsule, screenshot) tersedia lokal di
- *   `public/images/games/<id>/`. Tidak ada URL eksternal.
- * - Rating adalah nilai editorial GAMEHUB (bukan rating resmi toko) dan
- *   ditandai jelas di antarmuka.
- * - `requirements.verified: true` berarti data spesifikasi tercatat pada
- *   halaman modal/detail sumber proyek. Nilai `false` berarti data contoh
- *   editorial yang belum diverifikasi dan selalu diberi label di UI.
- */
-
 const SHOT_COUNT = 4;
 
 /** Membuat daftar screenshot lokal untuk satu game. */

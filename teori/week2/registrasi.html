@@ -2,70 +2,93 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pendaftaran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Menu Navigasi -->
-    <a href="index.html">Beranda</a> |
-    <a href="registrasi.html">Pendaftaran</a> |
-    <a href="galeri.html">Galeri</a> |
-    <a href="member.html">Member</a> |
-    <a href="kontak.html">Kontak Kami</a>
-    <hr>
 
-    <h1>Form Pendaftaran Anggota (Sesuai KTP)</h1>
-    
-    <form action="#" method="POST">
-        <table border="1" cellpadding="5" cellspacing="0">
-            <tr>
-                <td>NIK</td><td>:</td><td><input type="number" name="nik"></td>
-            </tr>
-            <tr>
-                <td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama"></td>
-            </tr>
-            <tr>
-                <td>Tempat Lahir</td><td>:</td><td><input type="text" name="tempat_lahir"></td>
-            </tr>
-            <tr>
-                <td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir"></td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin</td><td>:</td>
-                <td>
-                    <input type="radio" name="jk" value="Laki-laki">Laki-laki
-                    <input type="radio" name="jk" value="Perempuan">Perempuan
-                </td>
-            </tr>
-            <tr>
-                <td>Alamat Lengkap</td><td>:</td><td><textarea name="alamat" cols="25" rows="4"></textarea></td>
-            </tr>
-            <tr>
-                <td>Agama</td><td>:</td>
-                <td>
-                    <select name="agama">
-                        <option value="">-- Pilih Agama --</option>
-                        <option value="Islam">Islam</option>
-                        <option value="Kristen">Kristen</option>
-                        <option value="Katolik">Katolik</option>
-                        <option value="Hindu">Hindu</option>
-                        <option value="Budha">Budha</option>
-                        <option value="Konghucu">Konghucu</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Pekerjaan</td><td>:</td><td><input type="text" name="pekerjaan"></td>
-            </tr>
-            <tr>
-                <td colspan="3" align="right">
-                    <button type="submit">Simpan</button>
-                    <button type="reset">Batal</button>
-                </td>
-            </tr>
-        </table>
-    </form>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="registrasi.html" class="aktif">Pendaftaran</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="member.html">Member</a>
+        <a href="kontak.html">Kontak Kami</a>
+    </nav>
 
-    <hr>
-    <p><i>Footer: Hak Cipta 2026 - Website Saya</i></p>
+    <main>
+        <h1>Form Pendaftaran Anggota</h1>
+        <p class="lead">Isi biodata sesuai KTP.</p>
+
+        <form action="#" method="POST">
+            <div class="tabel-wrap">
+            <table class="form">
+                <tr>
+                    <td>NIK</td><td>:</td><td><input type="number" name="nik"></td>
+                </tr>
+                <tr>
+                    <td>Nama Lengkap</td><td>:</td><td><input type="text" name="nama"></td>
+                </tr>
+                <tr>
+                    <td>Tempat Lahir</td><td>:</td><td><input type="text" name="tempat_lahir"></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td><td>:</td><td><input type="date" name="tanggal_lahir"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td><td>:</td>
+                    <td>
+                        <input type="radio" name="jk" id="jk-l" value="Laki-laki"><label for="jk-l">Laki-laki</label>
+                        <input type="radio" name="jk" id="jk-p" value="Perempuan"><label for="jk-p">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Golongan Darah</td><td>:</td><td>
+                        <select name="golongan_darah">
+                            <option value="">-- Pilih Golongan Darah --</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat Lengkap</td><td>:</td><td><textarea name="alamat" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Agama</td><td>:</td>
+                    <td>
+                        <select name="agama">
+                            <option value="">-- Pilih Agama --</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pekerjaan</td><td>:</td><td><input type="text" name="pekerjaan"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="aksi">
+                        <button type="reset" class="btn sekunder">Batal</button>
+                        <button type="submit" class="btn">Simpan</button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Hak Cipta 2026 - Website Zakaria</p>
+    </footer>
 </body>
 </html>

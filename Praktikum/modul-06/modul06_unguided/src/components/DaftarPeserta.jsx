@@ -4,7 +4,7 @@ import ItemPeserta from './ItemPeserta';
 function DaftarPeserta({ pesertaList, totalPeserta, onEdit, onDelete, onToggleHadir }) {
   if (totalPeserta === 0) {
     return (
-      <div style={{ textAlign: 'center', padding: '30px', color: '#6c757d', border: '1px dashed #ccc', borderRadius: '8px' }}>
+      <div style={{ textAlign: 'center', padding: '30px', color: '#6c757d', border: '1px dashed #ccc', borderRadius: '8px' }}>flutter pub add camera
         <h3>Belum ada peserta</h3>
       </div>
     );

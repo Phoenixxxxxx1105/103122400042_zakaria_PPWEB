@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Peserta - React</title>
+    <style>
+        :root { --bg: #f3f4f6; --card: #fff; --text: #1f2937; --border: #d1d5db; --primary: #000; --hover: #374151; --error: #ef4444; --success: #10b981; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); padding: 20px; margin: 0; }
+        .dashboard { max-width: 800px; margin: 0 auto; display: grid; gap: 20px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) { .dashboard { grid-template-columns: 1fr 1fr; } }
+        .card { background: var(--card); padding: 20px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.25rem; margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 15px;}
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-size: 0.875rem; margin-bottom: 5px; font-weight: 500; }
+        input, select { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; background: var(--primary); color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; transition: 0.2s; font-weight: 500;}
+        button:hover:not(:disabled) { background: var(--hover); }
+        button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .user-item { padding: 10px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 10px; }
+        .status { padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 0.9rem; }
+        .status.error { background: #fef2f2; color: var(--error); border: 1px solid #fecaca; }
+        .status.success { background: #ecfdf5; color: var(--success); border: 1px solid #a7f3d0; }
+        .status.info { background: #f3f4f6; color: #4b5563; border: 1px solid var(--border); }
+        .loader { text-align: center; padding: 20px; color: #6b7280; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="../../vendor/react.development.js"></script>
+    <script src="../../vendor/react-dom.development.js"></script>
+    <script src="../../vendor/axios.min.js"></script>
+    <script src="../../vendor/babel.min.js"></script>
+    
+    <script type="text/babel" data-presets="react" src="app.jsx"></script>
+</body>
+</html>

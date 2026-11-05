@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pendaftaran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-in">
+            <a class="brand" href="index.html"><i>✦</i> Website Kami</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <p class="side-judul">Menu</p>
+            <nav>
+                    <a href="index.html"><span class="mi">🏠</span><span class="mt">Beranda</span></a>
+                    <a href="registrasi.html" class="aktif"><span class="mi">📝</span><span class="mt">Pendaftaran</span></a>
+                    <a href="galeri.html"><span class="mi">🖼️</span><span class="mt">Galeri</span></a>
+                    <a href="member.html"><span class="mi">👥</span><span class="mt">Member</span></a>
+                    <a href="kontak.html"><span class="mi">✉️</span><span class="mt">Kontak Kami</span></a>
+            </nav>
+        </aside>
+
+        <div class="konten">
+<section class="hero kecil">
+        <div class="hero-in">
+            <h1>Form Pendaftaran Anggota</h1>
+            <p>Isi biodata sesuai KTP dengan lengkap dan benar.</p>
+        </div>
+    </section>
+
+    <main>
+        <form class="card naik" action="#" method="POST">
+            <div class="form-grid">
+                <div class="field"><label for="nik">NIK</label><input type="number" id="nik" name="nik"></div>
+                <div class="field"><label for="nama">Nama Lengkap</label><input type="text" id="nama" name="nama"></div>
+                <div class="field"><label for="tl">Tempat Lahir</label><input type="text" id="tl" name="tempat_lahir"></div>
+                <div class="field"><label for="tgl">Tanggal Lahir</label><input type="date" id="tgl" name="tanggal_lahir"></div>
+                <div class="field">
+                    <span class="lbl">Jenis Kelamin</span>
+                    <div class="radio-row">
+                        <label><input type="radio" name="jk" value="Laki-laki">Laki-laki</label>
+                        <label><input type="radio" name="jk" value="Perempuan">Perempuan</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="gd">Golongan Darah</label>
+                    <select id="gd" name="golongan_darah">
+                        <option value="">-- Pilih Golongan Darah --</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="field full"><label for="alamat">Alamat Lengkap</label><textarea id="alamat" name="alamat" rows="3"></textarea></div>
+                <div class="field">
+                    <label for="agama">Agama</label>
+                    <select id="agama" name="agama">
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </div>
+                <div class="field"><label for="kerja">Pekerjaan</label><input type="text" id="kerja" name="pekerjaan"></div>
+                <div class="field full aksi">
+                    <button type="reset" class="btn abu">Batal</button>
+                    <button type="submit" class="btn">Simpan</button>
+                </div>
+            </div>
+        </form>
+    </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>Hak Cipta 2026 - Website Zakaria</p>
+    </footer>
+</body>
+</html>
